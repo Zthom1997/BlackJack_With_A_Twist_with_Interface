@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C59709FD-9BF1-4876-959B-8763D2A72195}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GamesOfCards</RootNamespace>
+    <AssemblyName>GamesOfCards</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blackjack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blackjack.Designer.cs">
+      <DependentUpon>Blackjack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bust.Designer.cs">
+      <DependentUpon>Bust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="ScoreWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreWindow.Designer.cs">
+      <DependentUpon>ScoreWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="Model\Deck.cs" />
+    <Compile Include="Model\Game.cs" />
+    <Compile Include="Model\House.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\Price.cs" />
+    <Compile Include="NumberOfPlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NumberOfPlayerForm.Designer.cs">
+      <DependentUpon>NumberOfPlayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceBetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaceBetForm.Designer.cs">
+      <DependentUpon>PlaceBetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerNameForm.Designer.cs">
+      <DependentUpon>PlayerNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Blackjack.resx">
+      <DependentUpon>Blackjack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bust.resx">
+      <DependentUpon>Bust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreWindow.resx">
+      <DependentUpon>ScoreWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumberOfPlayerForm.resx">
+      <DependentUpon>NumberOfPlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaceBetForm.resx">
+      <DependentUpon>PlaceBetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerNameForm.resx">
+      <DependentUpon>PlayerNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\GamesOfCards.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackjack background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-photo-black-jack-gambling-table-302609324.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_blackjack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marble-2389905_960_720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marble-2389905_960_7201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ckjni4fffhw2wrpysxppqalpkknlarvfamscxnruziazxhqiux4xyjmfqed7ny92-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\GamesOfCards.exe" />
+    <Content Include="bin\Debug\GamesOfCards.pdb" />
+    <Content Include="bin\Debug\Kaarten\AceClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\AceClubs.png" />
+    <Content Include="bin\Debug\Kaarten\AceDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\AceDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\AceHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\AceHearts.png" />
+    <Content Include="bin\Debug\Kaarten\AceSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\AceSpades.png" />
+    <Content Include="bin\Debug\Kaarten\b1fh.png" />
+    <Content Include="bin\Debug\Kaarten\b1fv.png" />
+    <Content Include="bin\Debug\Kaarten\b1pb.png" />
+    <Content Include="bin\Debug\Kaarten\b1pl.png" />
+    <Content Include="bin\Debug\Kaarten\b1pr.png" />
+    <Content Include="bin\Debug\Kaarten\b1pt.png" />
+    <Content Include="bin\Debug\Kaarten\b2fh.png" />
+    <Content Include="bin\Debug\Kaarten\b2fv.png" />
+    <Content Include="bin\Debug\Kaarten\b2pb.png" />
+    <Content Include="bin\Debug\Kaarten\b2pl.png" />
+    <Content Include="bin\Debug\Kaarten\b2pr.png" />
+    <Content Include="bin\Debug\Kaarten\b2pt.png" />
+    <Content Include="bin\Debug\Kaarten\blackjack background.jpg" />
+    <Content Include="bin\Debug\Kaarten\ckjni4fffhw2wrpysxppqalpkknlarvfamscxnruziazxhqiux4xyjmfqed7ny92-.jpg" />
+    <Content Include="bin\Debug\Kaarten\DeuceClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\DeuceClubs.png" />
+    <Content Include="bin\Debug\Kaarten\DeuceDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\DeuceDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\DeuceHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\DeuceHearts.png" />
+    <Content Include="bin\Debug\Kaarten\DeuceSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\DeuceSpades.png" />
+    <Content Include="bin\Debug\Kaarten\EightClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\EightClubs.png" />
+    <Content Include="bin\Debug\Kaarten\EightDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\EightDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\EightHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\EightHearts.png" />
+    <Content Include="bin\Debug\Kaarten\EightSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\EightSpades.png" />
+    <Content Include="bin\Debug\Kaarten\FiveClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\FiveClubs.png" />
+    <Content Include="bin\Debug\Kaarten\FiveDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\FiveDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\FiveHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\FiveHearts.png" />
+    <Content Include="bin\Debug\Kaarten\FiveSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\FiveSpades.png" />
+    <Content Include="bin\Debug\Kaarten\FourClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\FourClubs.png" />
+    <Content Include="bin\Debug\Kaarten\FourDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\FourDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\FourHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\FourHearts.png" />
+    <Content Include="bin\Debug\Kaarten\FourSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\FourSpades.png" />
+    <Content Include="bin\Debug\Kaarten\JackClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\JackClubs.png" />
+    <Content Include="bin\Debug\Kaarten\JackDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\JackDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\JackHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\JackHearts.png" />
+    <Content Include="bin\Debug\Kaarten\JackSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\JackSpades.png" />
+    <Content Include="bin\Debug\Kaarten\KingClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\KingClubs.png" />
+    <Content Include="bin\Debug\Kaarten\KingDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\KingDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\KingHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\KingHearts.png" />
+    <Content Include="bin\Debug\Kaarten\KingSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\KingSpades.png" />
+    <Content Include="bin\Debug\Kaarten\marble-2389905_960_720.jpg" />
+    <Content Include="bin\Debug\Kaarten\NineClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\NineClubs.png" />
+    <Content Include="bin\Debug\Kaarten\NineDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\NineDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\NineHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\NineHearts.png" />
+    <Content Include="bin\Debug\Kaarten\NineSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\NineSpades.png" />
+    <Content Include="bin\Debug\Kaarten\QueenClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\QueenClubs.png" />
+    <Content Include="bin\Debug\Kaarten\QueenDiamonds - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\QueenDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\QueenHearts - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\QueenHearts.png" />
+    <Content Include="bin\Debug\Kaarten\QueenSpades - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\QueenSpades.png" />
+    <Content Include="bin\Debug\Kaarten\SevenClubs - kopie.png" />
+    <Content Include="bin\Debug\Kaarten\SevenClubs.png" />
+    <Content Include="bin\Debug\Kaarten\SevenDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\SevenHearts.png" />
+    <Content Include="bin\Debug\Kaarten\SevenSpades.png" />
+    <Content Include="bin\Debug\Kaarten\SixClubs.png" />
+    <Content Include="bin\Debug\Kaarten\SixDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\SixHearts.png" />
+    <Content Include="bin\Debug\Kaarten\SixSpades.png" />
+    <Content Include="bin\Debug\Kaarten\stock-photo-black-jack-gambling-table-302609324.jpg" />
+    <Content Include="bin\Debug\Kaarten\table_blackjack.png" />
+    <Content Include="bin\Debug\Kaarten\TenClubs.png" />
+    <Content Include="bin\Debug\Kaarten\TenDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\TenHearts.png" />
+    <Content Include="bin\Debug\Kaarten\TenSpades.png" />
+    <Content Include="bin\Debug\Kaarten\ThreeClubs.png" />
+    <Content Include="bin\Debug\Kaarten\ThreeDiamonds.png" />
+    <Content Include="bin\Debug\Kaarten\ThreeHearts.png" />
+    <Content Include="bin\Debug\Kaarten\ThreeSpades.png" />
+    <Content Include="Resources\AceClubs.png" />
+    <Content Include="Resources\AceDiamonds.png" />
+    <Content Include="Resources\AceHearts.png" />
+    <Content Include="Resources\AceSpades.png" />
+    <Content Include="Resources\b2fv.png" />
+    <Content Include="Resources\cards.ico" />
+    <Content Include="Resources\DeuceClubs.png" />
+    <Content Include="Resources\DeuceDiamonds.png" />
+    <Content Include="Resources\DeuceHearts.png" />
+    <Content Include="Resources\DeuceSpades.png" />
+    <Content Include="Resources\EightClubs.png" />
+    <Content Include="Resources\EightDiamonds.png" />
+    <Content Include="Resources\EightHearts.png" />
+    <Content Include="Resources\EightSpades.png" />
+    <Content Include="Resources\FiveClubs.png" />
+    <Content Include="Resources\FiveDiamonds.png" />
+    <Content Include="Resources\FiveHearts.png" />
+    <Content Include="Resources\FiveSpades.png" />
+    <Content Include="Resources\FourClubs.png" />
+    <Content Include="Resources\FourDiamonds.png" />
+    <Content Include="Resources\FourHearts.png" />
+    <Content Include="Resources\FourSpades.png" />
+    <Content Include="Resources\JackClubs.png" />
+    <Content Include="Resources\JackDiamonds.png" />
+    <Content Include="Resources\JackHearts.png" />
+    <Content Include="Resources\JackSpades.png" />
+    <Content Include="Resources\KingClubs.png" />
+    <Content Include="Resources\KingDiamonds.png" />
+    <Content Include="Resources\KingHearts.png" />
+    <Content Include="Resources\KingSpades.png" />
+    <Content Include="Resources\NineClubs.png" />
+    <Content Include="Resources\NineDiamonds.png" />
+    <Content Include="Resources\NineHearts.png" />
+    <Content Include="Resources\NineSpades.png" />
+    <Content Include="Resources\QueenClubs.png" />
+    <Content Include="Resources\QueenDiamonds.png" />
+    <Content Include="Resources\QueenHearts.png" />
+    <Content Include="Resources\QueenSpades.png" />
+    <Content Include="Resources\SevenClubs.png" />
+    <Content Include="Resources\SevenDiamonds.png" />
+    <Content Include="Resources\SevenHearts.png" />
+    <Content Include="Resources\SevenSpades.png" />
+    <Content Include="Resources\SixClubs.png" />
+    <Content Include="Resources\SixDiamonds.png" />
+    <Content Include="Resources\SixHearts.png" />
+    <Content Include="Resources\SixSpades.png" />
+    <Content Include="Resources\TenClubs.png" />
+    <Content Include="Resources\TenDiamonds.png" />
+    <Content Include="Resources\TenHearts.png" />
+    <Content Include="Resources\TenSpades.png" />
+    <Content Include="Resources\ThreeClubs.png" />
+    <Content Include="Resources\ThreeDiamonds.png" />
+    <Content Include="Resources\ThreeHearts.png" />
+    <Content Include="Resources\ThreeSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
