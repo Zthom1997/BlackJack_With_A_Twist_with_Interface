@@ -14,3 +14,4 @@ Features:
 - When the card is an ace, check the current score of the player and assign the card a value of 1 or 11. 
 - Save all data from the players of the game in a SQL-database when the game round is over.
 
+Note: All screens in this application are in Dutch! The source code is English!
